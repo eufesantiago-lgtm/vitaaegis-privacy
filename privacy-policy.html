@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - VitaAegis</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+        h1 { color: #1a73e8; }
+        h2 { color: #333; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        .updated { color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>Política de Privacidad de VitaAegis</h1>
+    <p class="updated">Última actualización: 25 de abril de 2026</p>
+
+    <h2>1. Introducción</h2>
+    <p>VitaAegis ("la Aplicación") es una aplicación desarrollada por Eulogio Fernández Santiago ("el Desarrollador"). Esta política de privacidad describe cómo la Aplicación gestiona la información del usuario. Nos comprometemos a proteger la privacidad de todos los usuarios, incluidos los menores de edad.</p>
+
+    <h2>2. Información que recopila la Aplicación</h2>
+    <p>VitaAegis <strong>no recopila, transmite ni comparte datos personales</strong> con terceros. Toda la información se almacena exclusivamente en el dispositivo del usuario.</p>
+    <p>La Aplicación procesa localmente los siguientes datos:</p>
+    <ul>
+        <li><strong>Notificaciones del dispositivo:</strong> La Aplicación lee las notificaciones del sistema para detectar valores de salud (como glucosa, ritmo cardíaco, etc.) mostrados por otras aplicaciones o dispositivos conectados. Estos datos se procesan en tiempo real y no se almacenan permanentemente.</li>
+        <li><strong>Preferencias del usuario:</strong> Configuraciones como umbrales de alerta, colores, sonidos y personalización del overlay se almacenan localmente en el dispositivo mediante almacenamiento cifrado (EncryptedSharedPreferences).</li>
+        <li><strong>Datos de gamificación:</strong> Estadísticas de progreso del usuario (nivel, logros, rachas) se almacenan localmente en el dispositivo de forma cifrada.</li>
+    </ul>
+
+    <h2>3. Datos de menores</h2>
+    <p>VitaAegis puede ser utilizada por menores de edad bajo supervisión de un adulto o tutor legal. La Aplicación:</p>
+    <ul>
+        <li><strong>No recopila</strong> información personal identificable de ningún usuario, incluidos menores.</li>
+        <li><strong>No contiene</strong> publicidad ni enlaces a sitios web externos.</li>
+        <li><strong>No permite</strong> compras dentro de la aplicación.</li>
+        <li><strong>No transmite</strong> datos fuera del dispositivo.</li>
+        <li><strong>No incluye</strong> funciones sociales ni de comunicación entre usuarios.</li>
+    </ul>
+    <p>Cumple con la Ley de Protección de la Privacidad Infantil en Internet (COPPA) y el Reglamento General de Protección de Datos (RGPD) en lo relativo a menores.</p>
+
+    <h2>4. Permisos requeridos</h2>
+    <p>La Aplicación solicita los siguientes permisos del sistema:</p>
+    <ul>
+        <li><strong>Acceso a notificaciones (NotificationListenerService):</strong> Para leer valores de salud mostrados en notificaciones de otras aplicaciones. Ningún contenido de las notificaciones se almacena permanentemente ni se transmite.</li>
+        <li><strong>Superposición sobre otras aplicaciones (SYSTEM_ALERT_WINDOW):</strong> Para mostrar el personaje guerrero animado sobre la pantalla del dispositivo.</li>
+        <li><strong>Servicio en primer plano:</strong> Para mantener activo el monitoreo de salud mientras la aplicación está en segundo plano.</li>
+        <li><strong>Inicio automático (RECEIVE_BOOT_COMPLETED):</strong> Para reiniciar el servicio de monitoreo tras un reinicio del dispositivo, si el usuario lo ha configurado.</li>
+    </ul>
+
+    <h2>5. Almacenamiento y seguridad de datos</h2>
+    <p>Todos los datos se almacenan exclusivamente en el dispositivo del usuario utilizando:</p>
+    <ul>
+        <li><strong>EncryptedSharedPreferences</strong> con cifrado AES-256 (AES256-SIV para claves, AES256-GCM para valores) para datos médicos sensibles.</li>
+        <li><strong>SharedPreferences estándar</strong> para preferencias de interfaz no sensibles (colores, tamaño de texto).</li>
+    </ul>
+    <p>La Aplicación tiene deshabilitadas las copias de seguridad automáticas de Android (<code>allowBackup="false"</code>) para evitar la extracción no autorizada de datos.</p>
+
+    <h2>6. Conexión a Internet</h2>
+    <p>VitaAegis <strong>no requiere conexión a Internet</strong> para funcionar. No se transmiten datos a servidores externos, servicios de analítica ni plataformas publicitarias.</p>
+
+    <h2>7. Servicios de terceros</h2>
+    <p>La Aplicación <strong>no integra</strong> servicios de terceros que recopilen datos, como:</p>
+    <ul>
+        <li>Google Analytics ni ningún servicio de analítica.</li>
+        <li>Redes publicitarias.</li>
+        <li>Redes sociales.</li>
+        <li>Servicios de crash reporting.</li>
+    </ul>
+
+    <h2>8. Retención y eliminación de datos</h2>
+    <p>Los datos se conservan en el dispositivo mientras la Aplicación esté instalada. Para eliminar todos los datos:</p>
+    <ul>
+        <li>Desinstalar la Aplicación, o</li>
+        <li>Borrar los datos de la Aplicación desde Ajustes &gt; Aplicaciones &gt; VitaAegis &gt; Almacenamiento &gt; Borrar datos.</li>
+    </ul>
+
+    <h2>9. Cambios en esta política</h2>
+    <p>Esta política de privacidad puede actualizarse ocasionalmente. Los cambios se publicarán en esta misma página con la fecha de actualización revisada. Se recomienda revisar esta política periódicamente.</p>
+
+    <h2>10. Contacto</h2>
+    <p>Si tienes preguntas o inquietudes sobre esta política de privacidad, puedes contactar al Desarrollador:</p>
+    <ul>
+        <li><strong>Nombre:</strong> Eulogio Fernández Santiago</li>
+        <li><strong>Email:</strong> <a href="mailto:eu.fe.santiago+PlayStore@gmail.com">eu.fe.santiago+PlayStore@gmail.com</a></li>
+    </ul>
+</body>
+</html>
