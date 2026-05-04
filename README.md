@@ -1,2 +1,2 @@
 # vitaaegis-privacy
-VitaAegis - Tu Guardián Inteligente - Privacy
+VitaAegis - Tu Guardián Activo - Privacy
