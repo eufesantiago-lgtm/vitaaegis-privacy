@@ -22,7 +22,7 @@
     <p>VitaAegis <strong>no recopila, transmite ni comparte datos personales</strong> con terceros. Toda la información se almacena exclusivamente en el dispositivo del usuario.</p>
     <p>La Aplicación procesa localmente los siguientes datos:</p>
     <ul>
-        <li><strong>Notificaciones del dispositivo:</strong> La Aplicación lee las notificaciones del sistema para detectar valores de salud (como glucosa, ritmo cardíaco, etc.) mostrados por otras aplicaciones o dispositivos conectados. Estos datos se procesan en tiempo real y no se almacenan permanentemente.</li>
+        <li><strong>Notificaciones del dispositivo:</strong> La Aplicación lee las notificaciones del sistema para detectar valores o eventos definidos por el usuario en otras aplicaciones. Estos datos se procesan en tiempo real y no se almacenan permanentemente.</li>
         <li><strong>Preferencias del usuario:</strong> Configuraciones como umbrales de alerta, colores, sonidos y personalización del overlay se almacenan localmente en el dispositivo mediante almacenamiento cifrado (EncryptedSharedPreferences).</li>
         <li><strong>Datos de gamificación:</strong> Estadísticas de progreso del usuario (nivel, logros, rachas) se almacenan localmente en el dispositivo de forma cifrada.</li>
     </ul>
@@ -41,16 +41,16 @@
     <h2>4. Permisos requeridos</h2>
     <p>La Aplicación solicita los siguientes permisos del sistema:</p>
     <ul>
-        <li><strong>Acceso a notificaciones (NotificationListenerService):</strong> Para leer valores de salud mostrados en notificaciones de otras aplicaciones. Ningún contenido de las notificaciones se almacena permanentemente ni se transmite.</li>
+        <li><strong>Acceso a notificaciones (NotificationListenerService):</strong> Para leer valores o eventos mostrados en notificaciones de otras aplicaciones. Ningún contenido de las notificaciones se almacena permanentemente ni se transmite.</li>
         <li><strong>Superposición sobre otras aplicaciones (SYSTEM_ALERT_WINDOW):</strong> Para mostrar el personaje guerrero animado sobre la pantalla del dispositivo.</li>
-        <li><strong>Servicio en primer plano:</strong> Para mantener activo el monitoreo de salud mientras la aplicación está en segundo plano.</li>
+        <li><strong>Servicio en primer plano:</strong> Para mantener activo el monitoreo de notificaciones mientras la aplicación está en segundo plano.</li>
         <li><strong>Inicio automático (RECEIVE_BOOT_COMPLETED):</strong> Para reiniciar el servicio de monitoreo tras un reinicio del dispositivo, si el usuario lo ha configurado.</li>
     </ul>
 
     <h2>5. Almacenamiento y seguridad de datos</h2>
     <p>Todos los datos se almacenan exclusivamente en el dispositivo del usuario utilizando:</p>
     <ul>
-        <li><strong>EncryptedSharedPreferences</strong> con cifrado AES-256 (AES256-SIV para claves, AES256-GCM para valores) para datos médicos sensibles.</li>
+        <li><strong>EncryptedSharedPreferences</strong> con cifrado AES-256 (AES256-SIV para claves, AES256-GCM para valores) para preferencias sensibles de la aplicación.</li>
         <li><strong>SharedPreferences estándar</strong> para preferencias de interfaz no sensibles (colores, tamaño de texto).</li>
     </ul>
     <p>La Aplicación tiene deshabilitadas las copias de seguridad automáticas de Android (<code>allowBackup="false"</code>) para evitar la extracción no autorizada de datos.</p>
